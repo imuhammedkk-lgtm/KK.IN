@@ -196,14 +196,15 @@
                     <p>Have questions about the Fan Dust Cleaner? We're here to help.</p>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <span>support@kk.in</span>
+                        <span>kkinstore@gmail.com</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <span>+91 90483 68870</span>
+                        <span>+91 9048374145</span>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/kk.instore" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
@@ -230,19 +231,47 @@
                     <input type="number" id="orderQty" value="1" min="1" max="10">
                 </div>
             </div>
-            <form id="orderForm">
+            <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="03efcea6-6f0b-4d97-a491-c3e0a71b8750">
+                <input type="hidden" name="subject" value="New Order - KK Store">
+                <input type="hidden" name="from_name" value="KK.in Store">
+                <input type="hidden" name="Product_Name" value="Fan Dust Cleaner">
+
                 <div class="form-grid">
-                    <input type="text" id="fullName" placeholder="Full Name" required>
-                    <input type="tel" id="phone1" placeholder="Phone Number 1" required>
-                    <input type="tel" id="phone2" placeholder="Phone Number 2" required>
-                    <input type="text" id="building" placeholder="Building Details (Name/No)" required>
-                    <input type="text" id="road" placeholder="Road Area / Landmark" required>
-                    <input type="text" id="colony" placeholder="Colony / Sector" required>
-                    <input type="text" id="pin" placeholder="Pin Code" required>
-                    <input type="text" id="city" placeholder="City" required>
-                    <input type="text" id="state" placeholder="State" required>
+                    <input type="text" name="Full_Name" id="fullName" placeholder="Full Name" required>
+                    <input type="tel" name="Phone_1" id="phone1" placeholder="Phone Number 1" required>
+                    <input type="tel" name="Phone_2" id="phone2" placeholder="Phone Number 2 (Optional)">
+                    <input type="text" name="House_Building_Details" id="building"
+                        placeholder="House/Building Name & No." required>
+                    <input type="text" name="Road_Area_Colony" id="road_colony" placeholder="Road / Area / Colony"
+                        required>
+                    <input type="text" name="Pincode" id="pin" placeholder="Pin Code" required>
+                    <input type="text" name="City" id="city" placeholder="City" required>
+                    <input type="text" name="State" id="state" value="Kerala" required>
                 </div>
-                <button type="submit" class="btn btn-primary order-btn">Place Order via Gmail</button>
+
+                <div class="quantity-control-hidden">
+                    <input type="hidden" name="Quantity" id="hiddenQty" value="1">
+                </div>
+
+                <button type="submit" class="order">
+                    <span class="default">Confirm Order</span>
+                    <span class="success">Order Placed
+                        <svg viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <div class="box"></div>
+                    <div class="truck">
+                        <div class="back"></div>
+                        <div class="front">
+                            <div class="window"></div>
+                        </div>
+                        <div class="light top"></div>
+                        <div class="light bottom"></div>
+                    </div>
+                    <div class="lines"></div>
+                </button>
             </form>
             <div id="deliveryInfo" class="delivery-info">
                 <i class="fas fa-truck"></i> Estimated Delivery: <span id="deliveryDate">Calculated...</span> (Arrives
