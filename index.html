@@ -4,301 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KK.in - Fan Dust Cleaner | Say Goodbye to Dust</title>
-    <meta name="description"
-        content="Design a modern, interactive 3D website for KK.in, featuring the 'Fan Dust Cleaner' product. Smooth, minimalistic interface with sleek animations.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>KK.IN | Premium E-Commerce Marketplace</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="https://i.postimg.cc/vmyDFQFg/61W3pj-D0P3L-SL1500-(1).jpg" alt="KK.in Logo">
-                KK<span>.in</span>
+                <img src="https://i.postimg.cc/XJ2BKX17/1000130455.jpg" alt="KK Logo">
+                KK<span>.IN</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#collection">Aesthetic Collection</a></li>
+                <li><a href="#trust">Quality Trust</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#" class="btn btn-primary buy-now-nav">Buy Now</a>
+            <div class="nav-actions">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-user"></i>
+                <i class="fa fa-shopping-bag"></i>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section Slider -->
     <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="reveal-text">Fan Dust Cleaner</h1>
-                <p class="tagline reveal-text">Say Goodbye to Dust, Hello to Fresh Air</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn btn-primary">Order Now <i class="fas fa-arrow-right"></i></a>
-                    <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="https://i.postimg.cc/XYMQ0sKS/uolg3-512.avif" alt="Royal Eagle Hook Hero">
+                <div class="hero-content">
+                    <h1>Rubam Aesthetic Essentials</h1>
+                    <p>Experience the perfect blend of innovation and home decor.</p>
+                    <a href="#collection" class="btn-primary">Shop Now</a>
                 </div>
             </div>
-            <div class="hero-3d-container">
-                <canvas id="canvas3d"></canvas>
-                <div class="scroll-indicator">
-                    <div class="mouse"></div>
-                    <span>Scroll to explore</span>
+            <div class="slide">
+                <img src="https://i.postimg.cc/T2qqLnD2/shutterstock-1722273808.webp" alt="Interior Design">
+                <div class="hero-content">
+                    <h1>Aesthetic Living</h1>
+                    <p>Elevate your space with our curated House & Decor collection.</p>
+                    <a href="#collection" class="btn-primary">View Collection</a>
                 </div>
             </div>
+        </div>
+        <div class="slider-nav">
+            <span class="dot active"></span>
+            <span class="dot"></span>
         </div>
     </header>
 
-    <section id="features" class="features">
+    <!-- Category Section - Simplified to Single Focus -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Product Highlights</h2>
-                <p>Powerful performance in a compact design</p>
+                <h2>Designed for Comfort</h2>
+                <p>Premium essentials for a beautiful home.</p>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="https://i.postimg.cc/26c5Zhqk/71mn5Om-I4GL-SL1500.jpg" alt="Strong Suction">
-                    </div>
-                    <div class="feature-info">
-                        <div class="icon-box"><i class="fas fa-wind"></i></div>
-                        <h3>Strong Suction</h3>
-                        <p>Advanced motor design provides deep cleaning power for every fan blade.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="https://i.postimg.cc/nVWzVKb5/71Lm-U0x-Ec-L-SL1500.jpg" alt="Rechargeable">
-                    </div>
-                    <div class="feature-info">
-                        <div class="icon-box"><i class="fas fa-battery-full"></i></div>
-                        <h3>Rechargeable</h3>
-                        <p>Long-lasting battery life with quick USB-C charging for cordless convenience.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="https://i.postimg.cc/1zyR7Jwv/71Lgi-PZVYk-L-SL1500.jpg" alt="Multi-purpose Brushes">
-                    </div>
-                    <div class="feature-info">
-                        <div class="icon-box"><i class="fas fa-brush"></i></div>
-                        <h3>Multi-purpose Brushes</h3>
-                        <p>Interchangeable heads for fans, keyboards, and tight corners.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-img">
-                        <img src="https://i.postimg.cc/vmyDFQFg/61W3pj-D0P3L-SL1500-(1).jpg" alt="Eco-Friendly">
-                    </div>
-                    <div class="feature-info">
-                        <div class="icon-box"><i class="fas fa-leaf"></i></div>
-                        <h3>Eco-Friendly</h3>
-                        <p>Washable filters and components to reduce waste and stay clean.</p>
+            <div class="main-featured-banner">
+                <div class="category-card" style="height: 500px;">
+                    <img src="https://i.postimg.cc/T2qqLnD2/shutterstock-1722273808.webp" alt="House & Decor">
+                    <div class="category-overlay">
+                        <span>Aesthetic</span>
+                        <h3>House & Decor</h3>
+                        <p style="font-size: 14px; margin-top: 5px; opacity: 0.9;">Functionality meets premium design.
+                        </p>
+                        <a href="#collection"
+                            style="color: var(--gold); text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-top: 15px; display: inline-block; font-weight: 700;">Click
+                            here to go to Essentials</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="gallery">
+    <!-- Featured Products -->
+    <section class="section" id="collection" style="background: #fafafa;">
         <div class="container">
             <div class="section-header">
-                <h2>Product Showcase</h2>
-                <p>Visual details of the Fan Dust Cleaner</p>
+                <h2>Essentials</h2>
+                <p>Functionality meets premium design.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-aos="zoom-in">
-                    <img src="https://i.postimg.cc/vmyDFQFg/61W3pj-D0P3L-SL1500-(1).jpg" alt="Fan Dust Cleaner 1">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://i.postimg.cc/26c5Zhqk/71mn5Om-I4GL-SL1500.jpg" alt="Fan Dust Cleaner 2">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://i.postimg.cc/nVWzVKb5/71Lm-U0x-Ec-L-SL1500.jpg" alt="Fan Dust Cleaner 3">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://i.postimg.cc/1zyR7Jwv/71Lgi-PZVYk-L-SL1500.jpg" alt="Fan Dust Cleaner 4">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Simple steps to a dust-free home</p>
-            </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-num">01</div>
-                    <div class="step-content">
-                        <h3>Attach the Brush</h3>
-                        <p>Select the appropriate brush head for your fan or surface and click it into place.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-num">02</div>
-                    <div class="step-content">
-                        <h3>Power On</h3>
-                        <p>Press the button once for standard mode or twice for high-intensity cleaning.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-num">03</div>
-                    <div class="step-content">
-                        <h3>Glide & Clean</h3>
-                        <p>Gently glide the cleaner along the fan blades. The suction captures all dust instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <div class="section-header">
-                <h2>Customer Reviews</h2>
-                <p>Join thousands of happy customers</p>
-            </div>
-            <div class="reviews-slider">
-                <div class="review-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Cleaning my ceiling fans was always a nightmare until I found this. So easy to use!"</p>
-                    <div class="user">- Rahul M.</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"The suction power is incredible for such a small device. Highly recommend for every household."
-                    </p>
-                    <div class="user">- Priya S.</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Great product! Cordless design makes it so much more convenient than traditional vacuums."</p>
-                    <div class="user">- Ankit K.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>Have questions about the Fan Dust Cleaner? We're here to help.</p>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>kkinstore@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 9048374145</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/kk.instore" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="about-us">
-                    <h2>About KK.in</h2>
-                    <p>KK.in is dedicated to bringing innovative home cleaning solutions to every doorstep. We believe
-                        in technology that makes life simpler and homes cleaner.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Checkout Modal -->
-    <div id="checkoutModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Complete Your Order</h2>
-            <div class="order-summary-box">
-                <p><strong>Product:</strong> Fan Dust Cleaner</p>
-                <p><strong>Price:</strong> <span id="displayPrice">₹499</span></p>
-                <div class="quantity-control">
-                    <label>Quantity:</label>
-                    <input type="number" id="orderQty" value="1" min="1" max="10">
-                </div>
-            </div>
-            <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="03efcea6-6f0b-4d97-a491-c3e0a71b8750">
-                <input type="hidden" name="subject" value="New Order - KK Store">
-                <input type="hidden" name="from_name" value="KK.in Store">
-                <input type="hidden" name="Product_Name" value="Fan Dust Cleaner">
-
-                <div class="form-grid">
-                    <input type="text" name="Full_Name" id="fullName" placeholder="Full Name" required>
-                    <input type="tel" name="Phone_1" id="phone1" placeholder="Phone Number 1" required>
-                    <input type="tel" name="Phone_2" id="phone2" placeholder="Phone Number 2 (Optional)">
-                    <input type="text" name="House_Building_Details" id="building"
-                        placeholder="House/Building Name & No." required>
-                    <input type="text" name="Road_Area_Colony" id="road_colony" placeholder="Road / Area / Colony"
-                        required>
-                    <input type="text" name="Pincode" id="pin" placeholder="Pin Code" required>
-                    <input type="text" name="City" id="city" placeholder="City" required>
-                    <input type="text" name="State" id="state" value="Kerala" required>
-                </div>
-
-                <div class="quantity-control-hidden">
-                    <input type="hidden" name="Quantity" id="hiddenQty" value="1">
-                </div>
-
-                <button type="submit" class="order">
-                    <span class="default">Confirm Order</span>
-                    <span class="success">Order Placed
-                        <svg viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <div class="box"></div>
-                    <div class="truck">
-                        <div class="back"></div>
-                        <div class="front">
-                            <div class="window"></div>
+            <div class="product-grid">
+                <!-- Product 1: Fan Dust Cleaner -->
+                <div class="product-card" data-name="Fan Dust Cleaner" data-price="₹499">
+                    <div class="product-image interactive-gallery">
+                        <span class="product-badge">Most Popular</span>
+                        <img src="https://i.postimg.cc/PJhnK0TX/61W3pj-D0P3L-SL1500-(1).jpg" alt="Fan Dust Cleaner"
+                            class="main-img">
+                        <div class="gallery-thumbnails">
+                            <img src="https://i.postimg.cc/VvNDYFFn/61KVCI70-z-L-SL1500.jpg" alt="Detail 1"
+                                class="thumb">
+                            <img src="https://i.postimg.cc/mkhyxgbD/71Lgi-PZVYk-L-SL1500.jpg" alt="Detail 2"
+                                class="thumb">
+                            <img src="https://i.postimg.cc/J4fcg8SB/71mn5Om-I4GL-SL1500.jpg" alt="Detail 3"
+                                class="thumb">
                         </div>
-                        <div class="light top"></div>
-                        <div class="light bottom"></div>
                     </div>
-                    <div class="lines"></div>
-                </button>
-            </form>
-            <div id="deliveryInfo" class="delivery-info">
-                <i class="fas fa-truck"></i> Estimated Delivery: <span id="deliveryDate">Calculated...</span> (Arrives
-                within 10 days)
-            </div>
-            <div class="whatsapp-support">
-                <p>Have any doubts? Ask us on WhatsApp!</p>
-                <a href="https://wa.me/919048374145?text=Hi, I have a doubt about the Fan Dust Cleaner." target="_blank"
-                    class="whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> Chat with Support
-                </a>
+                    <div class="product-info">
+                        <h3>Fan Dust Cleaner</h3>
+                        <p class="product-price">₹499</p>
+                    </div>
+                    <div class="buy-btn"><i class="fa fa-plus"></i></div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-name="Royal Eagle Hook" data-price="₹199">
+                    <div class="product-image interactive-gallery">
+                        <span class="product-badge">Top Seller</span>
+                        <img src="https://i.postimg.cc/XYMQ0sKS/uolg3-512.avif" alt="Royal Eagle Hook" class="main-img">
+                        <div class="gallery-thumbnails">
+                            <img src="https://i.postimg.cc/1Xq7p20j/uajv1-512.avif" alt="Detail 1" class="thumb">
+                            <img src="https://i.postimg.cc/MZvC6rBW/ikjy6-512.avif" alt="Detail 2" class="thumb">
+                            <img src="https://i.postimg.cc/9XngbvpN/download.jpg" alt="Detail 3" class="thumb">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Royal Eagle Hook (360°)</h3>
+                        <p class="product-price">₹199</p>
+                    </div>
+                    <div class="buy-btn"><i class="fa fa-plus"></i></div>
+                </div>
+                <!-- Product 3: 16-Piece Storage Set -->
+                <div class="product-card" data-name="16-Piece Storage Set" data-price="₹619">
+                    <div class="product-image interactive-gallery">
+                        <span class="product-badge">House Essential</span>
+                        <img src="https://i.postimg.cc/bJz20tQF/8ydkc-512.avif" alt="Kitchen Storage Set"
+                            class="main-img">
+                        <div class="gallery-thumbnails">
+                            <img src="https://i.postimg.cc/cLwKVmht/images.jpg" alt="Detail 1" class="thumb">
+                            <img src="https://i.postimg.cc/DybmXgtY/gyupm-512.avif" alt="Detail 2" class="thumb">
+                            <img src="https://i.postimg.cc/yxdhcYtD/images-(1).jpg" alt="Detail 3" class="thumb">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>16-Piece Storage Set</h3>
+                        <p class="product-price">₹619</p>
+                    </div>
+                    <div class="buy-btn"><i class="fa fa-plus"></i></div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Trust Signals -->
+    <section class="trust-signals" id="trust">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fa fa-shield-alt"></i>
+                    <h4>Premium Quality</h4>
+                    <p>Guaranteed authenticity.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-truck"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Shipment in 24 hours.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-lock"></i>
+                    <h4>Secure Payments</h4>
+                    <p>100% safe transactions.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa fa-sync"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 KK.in - All Rights Reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">KK<span>.IN</span></div>
+                    <p style="opacity: 0.6;">Redefining the digital marketplace for premium enthusiasts worldwide.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#collection">House & Decor</a></li>
+                        <li><a href="#trust">Quality Trust</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Tracking</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:kkinstore@gmail.com">kkinstore@gmail.com</a></li>
+                        <li><a href="tel:+919048374145">+91 9048374145</a></li>
+                        <li><a href="#">Instagram: @kk.instore</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 KK.IN. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
-    <a href="#" class="floating-cta">Buy Now</a>
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="order-container">
+            <div class="close-modal">&times;</div>
+            <h2>KK Store</h2>
+            <p>Complete your order by filling out the form below.</p>
 
-    <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+            <form id="checkoutForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="03efcea6-6f0b-4d97-a491-c3e0a71b8750">
+
+                <label>Full Name</label>
+                <input type="text" name="Full_Name" placeholder="John Doe" required>
+
+                <div class="flex-row">
+                    <div>
+                        <label>Phone Number 1</label>
+                        <input type="tel" name="Phone_1" placeholder="9876543210" required>
+                    </div>
+                    <div>
+                        <label>Phone Number 2</label>
+                        <input type="tel" name="Phone_2" placeholder="Optional">
+                    </div>
+                </div>
+
+                <div class="flex-row">
+                    <div style="flex: 2;">
+                        <label>Product Name</label>
+                        <input type="text" id="modalProductName" name="Product_Name" placeholder="Item Name" required
+                            readonly>
+                    </div>
+                    <div style="flex: 1;">
+                        <label>Quantity</label>
+                        <input type="number" name="Quantity" value="1" min="1" required>
+                    </div>
+                </div>
+
+                <label>House Name / Building Name & No.</label>
+                <input type="text" name="House_Building_Details" placeholder="Example: Flat 4B, KK Villa" required>
+
+                <label>Road / Area / Colony</label>
+                <input type="text" name="Road_Area_Colony" placeholder="Example: MG Road, Green Colony" required>
+
+                <div class="flex-row">
+                    <div>
+                        <label>Pincode</label>
+                        <input type="text" name="Pincode" placeholder="600123" required>
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="City" placeholder="City Name" required>
+                    </div>
+                </div>
+
+                <label>State</label>
+                <input type="text" name="State" value="Kerala" required>
+
+                <div class="truck-button-wrapper">
+                    <button type="submit" class="truck-button">
+                        <span class="default">Confirm Order</span>
+                        <span class="success">
+                            Order Placed
+                            <svg viewbox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <div class="truck">
+                            <div class="wheel"></div>
+                            <div class="back"></div>
+                            <div class="front"></div>
+                            <div class="box"></div>
+                        </div>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="main.js"></script>
 </body>
 
