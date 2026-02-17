@@ -215,59 +215,60 @@ window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 // Dynamic Price Calculation
 const unitPrice = 499;
 const qtyInput = document.getElementById("orderQty");
+const hiddenQty = document.getElementById("hiddenQty");
 const priceDisplay = document.getElementById("displayPrice");
 
 qtyInput.oninput = () => {
     const total = unitPrice * qtyInput.value;
     priceDisplay.innerText = `₹${total}`;
+    hiddenQty.value = qtyInput.value; // Sync with hidden input for Web3Forms
 };
 
-// Form Submission to Gmail
-orderForm.onsubmit = (e) => {
+// Form Submission to Web3Forms with Animation
+orderForm.onsubmit = async (e) => {
     e.preventDefault();
 
-    const product = "Fan Dust Cleaner";
-    const qty = qtyInput.value;
-    const totalPrice = unitPrice * qty;
-    const name = document.getElementById("fullName").value;
-    const p1 = document.getElementById("phone1").value;
-    const p2 = document.getElementById("phone2").value;
-    const building = document.getElementById("building").value;
-    const road = document.getElementById("road").value;
-    const colony = document.getElementById("colony").value;
-    const pin = document.getElementById("pin").value;
-    const city = document.getElementById("city").value;
-    const state = document.getElementById("state").value;
+    const orderButton = orderForm.querySelector('.order');
+    if (orderButton.classList.contains('animate')) return;
 
-    const subject = `New Order from ${name} - KK.in`;
-    const body = `
-Order Summary:
----------------
-Product: ${product}
-Unit Price: ₹${unitPrice}
-Quantity: ${qty}
-Total Price: ₹${totalPrice}
+    // Start Animation
+    orderButton.classList.add('animate');
 
-Customer Details:
------------------
-Full Name: ${name}
-Phone 1: ${p1}
-Phone 2: ${p2}
+    // Prepare Web3Forms submission
+    const formData = new FormData(orderForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-Shipping Address:
------------------
-Building: ${building}
-Road/Area: ${road}
-Colony/Sector: ${colony}
-Pin Code: ${pin}
-City: ${city}
-State: ${state}
-    `.trim();
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        });
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=kkinstore@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // Wait for animation to finish (at least 10s) before showing result
+        setTimeout(() => {
+            modal.style.display = "none";
+            orderForm.reset();
+            orderButton.classList.remove('animate');
+            priceDisplay.innerText = `₹${unitPrice}`;
+            hiddenQty.value = "1";
 
-    window.open(gmailUrl, '_blank');
-    modal.style.display = "none";
-    orderForm.reset();
-    priceDisplay.innerText = `₹${unitPrice}`; // Reset display
+            if (response.status === 200) {
+                alert("Order Placed Successfully! Check your email for confirmation.");
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        }, 10000);
+
+    } catch (error) {
+        console.log(error);
+        orderButton.classList.remove('animate');
+        alert("Submission failed. Please check your connection.");
+    }
 };
+
+
