@@ -1,5 +1,4 @@
 # KK.in - Fan Dust Cleaner Website Walkthrough
-
 This document summarizes the features and implementation of the KK.in Fan Dust Cleaner website.
 
 ## 🚀 Project Overview
