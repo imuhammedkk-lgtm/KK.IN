@@ -39,10 +39,11 @@ const modal = document.getElementById('orderModal');
 const closeBtn = document.querySelector('.close-modal');
 const modalProductName = document.getElementById('modalProductName');
 
-document.querySelectorAll('.buy-btn, .product-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Find the product card if we clicked the buy-btn
-        const productCard = card.closest('.product-card') || card;
+document.querySelectorAll('.buy-btn').forEach(buyBtn => {
+    buyBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Find the product card
+        const productCard = buyBtn.closest('.product-card');
         const name = productCard.getAttribute('data-name');
 
         modalProductName.value = name;
@@ -77,7 +78,10 @@ document.querySelectorAll('.interactive-gallery').forEach(gallery => {
         };
 
         thumb.onmouseover = updateImg;
-        thumb.onclick = updateImg;
+        thumb.onclick = (e) => {
+            e.stopPropagation();
+            updateImg();
+        };
     });
 });
 
